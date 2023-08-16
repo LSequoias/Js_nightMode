@@ -1,0 +1,115 @@
+
+* {
+    transition: all .33s;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section, div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+section {
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.card, .btn {
+    margin: 2rem;
+    position: relative;
+}
+
+.card {
+    width: 420px;
+    box-shadow:-1px 2px 2px #acacac, 0px 2px 1px mediumaquamarine;
+    background-color: #b3eeb1;
+}
+
+.card:before,
+.card:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.card:before, .btn:before {
+    top: 0;
+    left: 0;
+    border-top: 4px solid mediumaquamarine;
+    border-left: 4px solid mediumseagreen;
+}
+
+.card:after, .btn:after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid mediumaquamarine;
+    border-right: 4px solid mediumseagreen;
+}
+
+.btn {
+    display : inline;
+    background-image: linear-gradient(to left,mediumaquamarine, mediumseagreen);
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    border: none;
+    background-color: #333;
+    font-size: 1.5rem;
+    color: silver;
+}
+
+.btn:before, .btn:after {
+    content: "";
+    position: absolute;
+    width: 125%;
+    height: 100%;
+    border-radius: 8px;
+    margin: -4PX -1rem;
+}
+
+.title, .paragraph {
+    font-family: 'Cormorant', serif;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #222;
+    background:linear-gradient(to right top, mediumseagreen, mediumaquamarine);
+    border-bottom: 2px solid mediumseagreen;
+    padding: 10px;
+    margin: 0;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-indent: 1.5rem;
+    color:#333;
+}
+
+
+.paragraph::first-letter {
+    font-size: calc(100% + .5rem);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.dark {
+    background-color: #222;
+}
